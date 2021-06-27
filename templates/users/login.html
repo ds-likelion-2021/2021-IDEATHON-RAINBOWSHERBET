@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'styles/login.css' %}">
+	<title>걷고싶길: 로그인</title>
+</head>
+
+<body>
+	<header class="header">
+		<div id="wrap">
+			<img id="logo" src="{% static 'mainlogo.png' %}">
+			<div id="logotxt">걷고싶길</div>
+		</div>
+		<div id="txt">나만 알던 길, 이젠 함께 걷고 싶은 길</div>
+	</header>
+	<div id="main">
+		<section class="section">
+			<form action="/my-handling-form-page" method="post">
+				<div>
+					<label for="id"></label>
+					<input type="text" id="identification" placeholder="ID"/>
+				</div>
+				<div>
+					<label for="pw"></label>
+					<input type="password" id="pw" placeholder="PASSWORD"/>
+				</div>
+				<div>
+					<input type="submit" class="form_submit_button" value="LOG IN"></button>
+				</div>
+	
+				<div>
+					<img id="findicon" src="{% static 'find.png' %}">
+					<div id="find">아이디·비밀번호 찾기</div>
+					<img id="joinicon" src="{% static 'join.png' %}">
+					<div id="join">회원가입</div>
+				</div>
+			</form>
+			<img id="leaf" src="{% static 'leaf.png' %}">
+			<img id="flower" src="{% static 'flower.png' %}">
+			<img id="petal" src="{% static 'petal.png' %}">
+			<img id="tree" src="{% static 'tree.png' %}">
+		</section>	
+	</div>
+	<footer></footer>
+	
+</body>
+</html>

@@ -1,0 +1,193 @@
+*{box-sizing:border-box;}
+
+body {margin: 0;}
+
+html, body{
+    height: 100%;
+}
+
+/* 배경 색 지정*/
+header {
+	background-color: #ffffff;
+}
+#main {
+	background-color: #b6d898;
+}
+footer {
+	background-color: #b39a6b;
+}
+
+/*header*/
+.header {
+	padding: 11px;
+}
+
+#wrap {
+	width: 50%;
+	margin: 10px auto;
+	position: relative;
+}
+
+#logo {
+	width: 125px;
+	height: 125px;
+	position: relative;
+	left: 42%;
+	
+}
+
+#logotxt {
+	font-size: 70px;
+	font-weight: 700;
+	font-family: "상상토끼 꽃길";
+	color: #63915a;
+	text-align: center;
+	
+}
+
+#txt {
+	text-align: center;  	
+	font-family: "Arial";
+	font-size: 20px;
+    font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #63915a;
+}
+
+/*main*/
+#main{
+	display: flex;
+	justify-content: center;
+	flex:1;
+}
+
+section {
+	padding: 40px;
+}
+
+#identification {
+
+	width: 500px;
+	height: 50px;
+	padding: 10px;
+	border-radius: 15px;
+	font-family: "Arial";
+	font-size: 25px;
+	font-style: normal;
+	text-align: left;
+	color: #b9b9b9;
+	border-style: none;
+	display: block; margin: 0px auto;         
+}
+
+#pw {
+	width: 500px;
+	height: 50px;
+	padding: 10px;
+	border-radius: 15px;
+	background-color: #ffffff;
+	font-family: "Arial";
+	font-size: 25px;
+	font-style: normal;
+	text-align: left;
+	color: #b9b9b9;
+	border-style: none;
+	display: block; margin: 20px auto;
+}
+
+.form_submit_button {
+	width: 500px;
+	height: 60px;
+	margin: 10px;
+	background-color: #63915a;
+	font-family: "Arial";
+	font-size: 40px;
+	font-weight: 600;
+	font-style: normal;
+	text-align: center;
+	color: #ffffff;
+	border-style: none;
+	border-radius: 25px;
+	display: block; margin: 30px auto;
+}
+
+.form_submit_button:hover {
+	background-color: #b6d898;
+	text-decoration-color: #ffffff;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #63915a;
+}
+
+#find {
+	font-family: "Arial";
+	font-size: 20px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: #63915a;
+	display: inline-block;
+	padding-right: 145px;
+}
+
+#join {
+	font-family: "Arial";
+	font-size: 20px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: #63915a;
+	display: inline-block;
+
+}
+
+#findicon {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+}
+
+#joinicon {
+	width: 33px;
+	height: 33px;
+	display: inline-block;
+}
+
+#tree {
+	width: 244px;
+	height: 321px;
+	position: fixed;
+	bottom: 40px;
+	right: 20px;
+}
+
+#leaf {
+	position: fixed;
+	bottom: 40px;
+	right: 200px;
+}
+
+#flower {
+	position: fixed;
+	bottom: 90px;
+	right: 240px;
+}
+
+#petal {
+	position: fixed;
+	bottom: 90px;
+	right: 200px;
+}
+
+/*footer*/
+footer {
+	padding: 30px;
+}

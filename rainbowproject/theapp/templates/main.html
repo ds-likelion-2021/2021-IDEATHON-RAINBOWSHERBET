@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'css/road.css' %}">
+	<title>메인 페이지</title>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+    <ul class="navbar__logo">
+        <li><a href=""><img src="{% static 'images/mainlogo.png' %}"></a></li>
+        <li>걷고싶길</li>
+    </ul>
+
+    <ul class="navbar__menu">
+        <li><a href="">길 찾기</a></li>
+        <li><a href="">추천 길</a></li>
+        <li><a href="">커뮤니티</a></li>
+    </ul>
+
+    <div class="navbar__login">
+        <a href=""><button type="login">Login</button></a>
+    </div>
+</nav>
+    <div id="map" style="width:1440px;height:820px;"></div>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=08d31ee0c2a5a1549a89195d2459d28b"></script>
+<script>
+    var container = document.getElementById('map');
+    var options = {
+        center: new kakao.maps.LatLng(33.450701, 126.570667),
+        level: 3
+    };
+
+    var map = new kakao.maps.Map(container, options);
+</script>
+</body>
+</html>

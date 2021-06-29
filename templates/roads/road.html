@@ -16,35 +16,80 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="{% static 'styles/road.css' %}">
-	<title>메인 페이지</title>
+	<title>걷고싶길</title>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
-    <ul class="navbar__logo">
-        <li><a href=""><img src="{% static 'images/mainlogo.png' %}"></a></li>
-        <li>걷고싶길</li>
+        <ul class="navbar__logo">
+            <li><a href=""><img src="{% static 'images/mainlogo.png' %}"></a></li>
+            <li>걷고싶길</li>
+        </ul>
+    
+        <ul class="navbar__menu">
+            <li><a href="">길 찾기</a></li>
+            <li><a href="">추천 길</a></li>
+            <li><a href="">커뮤니티</a></li>
+        </ul>
+    
+        <div class="navbar__login">
+            <a href=""><button type="login">Login</button></a>
+        </div>
+    </nav>
+    <ul id="leftcategory">
+        <li>
+            <div id="category">장소, 주소 검색</div>
+            <div id="search">
+                <input type="text" id="searchbar" placeholder="찾고 싶은 길을 검색하세요">
+            </div>
+            
+        </li>
+        <li>
+            <div id="category">맞춤 길 찾기</div>
+            <div id="categorybox">
+                <span id="categorytxt">나이</span><br>
+                <input type="button" id="button" value="10대">
+                <input type="button" id="button" value="20대">
+                <input type="button" id="button" value="30대">
+                <input type="button" id="button" value="40~60">
+                <input type="button" id="button" value="60~">
+            </div>
+            <div id="categorybox">
+                <span id="categorytxt">동행</span><br>
+                <input type="button" id="button" value="혼자">
+                <input type="button" id="button" value="친구">
+                <input type="button" id="button" value="연인">
+                <input type="button" id="button" value="가족">
+                <input type="button" id="button" value="반려견">
+            </div>
+            <div id="categorybox">
+                <span id="categorytxt">테마</span><br>
+                <input type="button" id="button" value="자연">
+                <input type="button" id="button" value="도시">
+                <input type="button" id="button" value="전통">
+            </div>
+            <div id="categorybox">
+                <span id="categorytxt">계절</span><br>
+                <input type="button" id="button" value="봄">
+                <input type="button" id="button" value="여름">
+                <input type="button" id="button" value="가을">
+                <input type="button" id="button" value="겨울">
+            </div>       
+        </li>
+        <li id="bottom">
+            <div><input type="button" id="reset" value="초기화"></div>
+            <div><input type="button" id="apply" value="적용하기"></div>
+        </li>
     </ul>
-
-    <ul class="navbar__menu">
-        <li><a href="">길 찾기</a></li>
-        <li><a href="">추천 길</a></li>
-        <li><a href="">커뮤니티</a></li>
-    </ul>
-
-    <div class="navbar__login">
-        <a href=""><button type="login">Login</button></a>
-    </div>
-</nav>
-    <div id="map" style="width:1440px;height:820px;"></div>
+    <div id="map" style="width:1285px;height:715px;"></div>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=08d31ee0c2a5a1549a89195d2459d28b"></script>
-<script>
-    var container = document.getElementById('map');
-    var options = {
-        center: new kakao.maps.LatLng(33.450701, 126.570667),
-        level: 3
-    };
-
-    var map = new kakao.maps.Map(container, options);
-</script>
+    <script>
+        var container = document.getElementById('map');
+        var options = {
+            center: new kakao.maps.LatLng(33.450701, 126.570667),
+            level: 3
+        };
+    
+        var map = new kakao.maps.Map(container, options);
+    </script>
 </body>
 </html>

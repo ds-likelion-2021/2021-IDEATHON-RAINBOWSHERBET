@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/upload.css' %}">
+	<title>걷고싶길</title>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+        <ul class="navbar__logo">
+            <li><a href=""><img src="{% static 'images/mainlogo.png' %}">></a></li>
+            <li>걷고싶길</li>
+        </ul>
+    
+        <ul class="navbar__menu">
+            <li><a href="">길 찾기</a></li>
+            <li><a href="">추천 길</a></li>
+            <li><a href="">커뮤니티</a></li>
+        </ul>
+    
+        <div class="navbar__login">
+            <a href=""><button type="login">Login</button></a>
+        </div>
+    </nav>
+    
+    <section>
+        <div class="back">
+            <div class="uploadroad">
+                <div id="box_title">길 올리기 </div>
+                <div id="roadname_box">
+                    <div id="roadname_text">길 이름 </div>
+                    <input type="text" id="roadname_input">
+                </div>
+                <div id="location_box">
+                    <div id="location_text">위치 </div>
+                    <input type="text" id="location_input">
+                </div>
+                <div id="route_display_box">
+                    <div id="route_display_text">경로 표시</div>
+                    <div id="upload_img_box"><img id=upload_img src="{% static 'images/uploading.png' %}"></div>
+                </div>
+                <div id="hashtags_box">
+                    <div id="hashtags_text">해시태그</div> 
+    
+                    <div id="wrapping_inner_hashtag_box">
+                        <select>
+                            <option value="" disabled selected>나이</option>
+                            <option>10대</option>
+                            <option>20대</option>
+                            <option>30대</option>
+                            <option>40~60</option>
+                            <option>60~</option>
+                        </select>
+                        <select>
+                            <option value="" disabled selected>동행</option>
+                            <option>혼자</option>
+                            <option>친구</option>
+                            <option>연인</option>
+                            <option>가족</option>
+                            <option>반려견</option>
+                        </select>
+    
+                        <select>
+                        <option value="" disabled selected>테마</option>
+                            <option>자연</option>
+                            <option>도시</option>
+                            <option>전통</option>
+                        </select>
+    
+                        <select>
+                        <option value="" disabled selected>계절</option>
+                            <option>봄</option>
+                            <option>여름</option>
+                            <option>가을</option>
+                            <option>겨울</option>
+                        </select>
+                    </div>
+                    
+                </div>
+                <div id="oneline_introduce_box">
+                    <div id="oneline_introduce_text">한줄소개</div>
+                    <textarea id="oneline_introduce_input" rows="1" cols="20"> </textarea>
+                </div>
+                <div id="representing_image_box">
+                    <div id="representing_image_text">대표이미지</div>
+                    <div id="upload_img_box"><img id="upload_img" src="{% static 'images/uploading.png' %}"></div>
+                </div>
+                <div id="details_box">
+                    <div id="details_text">상세설명</div>
+                    <textarea id="details_text_input" rows="5" cols="20"> </textarea>
+                </div>
+                <div id="buttonbox"> <input type="button" id="uploading_button" value="업로드"></div>
+            </div>
+        </div>
+    </section>
+
+<footer></footer>  
+</body>
+</html>
